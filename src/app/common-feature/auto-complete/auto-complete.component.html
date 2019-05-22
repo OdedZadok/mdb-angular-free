@@ -1,3 +1,16 @@
 <p>
   auto-complete works!
 </p>
+<div class="md-form">
+  <input type="text" class="completer-input form-control mdb-autocomplete"
+         [(ngModel)]="searchText"
+         (input)="getFilteredData()"
+
+         placeholder="Choose your color">
+
+</div>
+<div>
+    <li *ngFor="let country of countryList">
+      {{country.name}}
+    </li>
+</div>
